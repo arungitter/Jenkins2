@@ -1,5 +1,5 @@
 @echo off
-findstr /m "doings" result.txt 
+findstr /m ": fail" stderr.txt 
 if %errorlevel%==0 (
 echo true
 ) else (
