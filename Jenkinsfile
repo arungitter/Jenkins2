@@ -8,15 +8,14 @@ pipeline {
                         returnStdout: true,
                         script: "@echo off & findstr /m \"arun\" stderr.txt"// & if %errorlevel%==0 (echo true) else (echo false)"
                     )
-
-                    
+                     if("stderr.txt".equals(x)){
+                        echo x
+                    }else{
+                            echo "arun"
+                    }
                 }
                 //bat  "find"
-                if("stderr.txt".equals(x)){
-                        echo x
-                }else{
-                        echo "arun"
-                }
+               
             }
         }
     }
