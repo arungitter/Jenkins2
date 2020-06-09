@@ -8,7 +8,7 @@ pipeline {
                         returnStdout: true,
                         script: "@echo off & findstr /m \"fail\" stderr.txt"// & if %errorlevel%==0 (echo true) else (echo false)"
                     )
-                     if("stderr.txt".equals(x)){
+                     if("stderr.txt".equals(x.toString())){
                         echo x
                     }else{
                             echo "arun"
