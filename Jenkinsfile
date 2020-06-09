@@ -6,12 +6,10 @@ pipeline {
                 script {
                     x = bat(
                         returnStdout: true,
-                        script: "@echo off & findstr /m \": fail\" stderr.txt & if %errorlevel%==0 (echo true) else (echo false)"
+                        script: "@echo off & findstr /m \"arun\" stderr.txt"
                     )
-
-                    echo "Arunva sdssd"+x+"New Variable"
+                    echo "Arunva sdssd "+x+" New Variable"
                 }
-                //bat  "find"
             }
         }
     }
