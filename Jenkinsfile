@@ -9,7 +9,7 @@ pipeline {
                         script: "@echo off & findstr /m \"fail\" stderr.txt"// & if %errorlevel%==0 (echo true) else (echo false)"
                     )
                     echo x
-                     if("stderr.txt".equals(x.toString())){
+                     if("stderr.txt".equals(x.toString().trim())){
                         echo x + "Arun"
                     }else{
                             echo "arun"
