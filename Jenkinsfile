@@ -6,12 +6,17 @@ pipeline {
                 script {
                     x = bat(
                         returnStdout: true,
-                        script: "@echo off & findstr /m \"Success\" stderr.txt"// & if %errorlevel%==0 (echo true) else (echo false)"
+                        script: "@echo off & findstr /m \"arun\" stderr.txt"// & if %errorlevel%==0 (echo true) else (echo false)"
                     )
 
-                    echo x+"New Variable"
+                    
                 }
                 //bat  "find"
+                if("stderr.txt".equals(x)){
+                        echo x
+                }else{
+                        echo "arun"
+                }
             }
         }
     }
